@@ -4,116 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>My Favorite Hobby</title>
-        <style>
-            h1 {
-                grid-area: h1;
-            }
-            header div {
-                grid-area: button;
-            }
-            header button {
-                margin-top: 25px;
-            }
-            header {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-template-areas: "h1 . button . .";
-                text-align: center;
-            }
-            h2,
-            footer {
-                text-align: center;
-            }
-            img {
-                max-width: 100%;
-                border-radius: 15px;
-            }
-            main {
-                max-width: 50%;
-                margin: 20px auto;
-                background-color: rgba(255, 255, 255, 0.8);
-                padding: 20px;
-                border-radius: 15px;
-            }
-            button {
-                border: 1px solid black;
-                padding: 5px 8px;
-                border-radius: 8px;
-                transition: all 200ms ease-in-out;
-            }
-            button:hover {
-                transform: scale(1.2);
-            }
-            a {
-                text-decoration: none;
-                color: black;
-            }
-            .light-theme {
-                background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/997/original/background.jpg?1696432111");
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            .dark-theme {
-                background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/000/original/background-dark.jpg?1696433791");
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            .dark-theme h1 {
-                color: antiquewhite;
-            }
-            .dark-theme main {
-                background-color: rgba(250, 235, 215, 0.7);
-            }
-            .dark-theme footer {
-                color: antiquewhite;
-            }
-            .dark-theme a {
-                color: antiquewhite;
-            }
-            .main-image {
-                transition: all 350ms ease-in-out;
-                max-width: 50%;
-                display: block;
-                margin: 0 auto;
-            }
-            .main-image:hover {
-                transform: scale(1.1);
-                filter: contrast(65%);
-            }
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .grid img {
-                transition: all 300ms ease-in-out;
-            }
-            .grid img:hover {
-                transform: scale(1.5);
-            }
-            .last-image {
-                max-width: 75%;
-                display: block;
-                margin: 0 auto;
-            }
-            .about {
-                font-size: 120%;
-                line-height: 1.5;
-            }
-            .button {
-                text-align: center;
-            }
-            .light-theme #toggle-theme {
-                background-color: black;
-                color: white;
-            }
-            #learn-more {
-                background-color: antiquewhite;
-            }
-            .dark-theme #toggle-theme {
-                background-color: antiquewhite;
-                color: black;
-            }
-        </style>
+        <link rel="stylesheet" href="./src/styles.css" />
     </head>
     <body class="light-theme">
         <header>
@@ -136,7 +27,7 @@
                         rel="noopener noreferrer"
                     >
                         <img
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/962/original/library-chair.jpg?1696420776"
+                            src="./src/images/library-chair.jpg"
                             alt="Ceiling-high bookshelf with a cozy black chair and window."
                             class="main-image"
                     /></a>
@@ -144,32 +35,32 @@
                 <div class="grid">
                     <figure>
                         <img
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/966/original/women-chair.jpg?1696420813"
+                            src="./src/images/women-chair.jpg"
                             alt="Over the shoulder of a woman reading"
                         />
                     </figure>
                     <figure>
                         <img
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/965/original/woman-couch.jpg?1696420805"
+                            src="./src/images/woman-couch.jpg"
                             alt="Woman reading on couch with bookshelves behind."
                         />
                     </figure>
                     <figure>
                         <img
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/964/original/child-silhouette.jpg?1696420792"
+                            src="./src/images/child-silhouette.jpg"
                             alt="Child's silhouette reading against a tree."
                         />
                     </figure>
                     <figure>
                         <img
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/963/original/man-outside.jpg?1696420785"
+                            src="./src/images/man-outside.jpg"
                             alt="Man reading on grass with trees behind."
                         />
                     </figure>
                 </div>
                 <figure>
                     <img
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/961/original/library-walkway.jpg?1696420768"
+                        src="./src/images/library-walkway.jpg"
                         alt="Curved library walkway lined with books."
                         class="last-image"
                     />
@@ -206,24 +97,6 @@
                 >
             </p>
         </footer>
-        <script>
-            function changeTheme(button) {
-                let body = document.querySelector("body");
-                if (body.classList.contains("light-theme")) {
-                    body.classList.remove("light-theme");
-                    body.classList.add("dark-theme");
-                    button.innerHTML = "Light Theme";
-                } else {
-                    body.classList.remove("dark-theme");
-                    body.classList.add("light-theme");
-                    button.innerHTML = "Dark Theme";
-                }
-            }
-            let themeButton = document.querySelector("#toggle-theme");
-            themeButton.innerHTML;
-            themeButton.addEventListener("click", () =>
-                changeTheme(themeButton)
-            );
-        </script>
+        <script src="./src/index.js"></script>
     </body>
 </html>
