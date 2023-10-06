@@ -4,6 +4,7 @@
 
 -   [About](#about)
 -   [Features](#features)
+-   [Live Demo](#live%20demo)
 
 ## About
 
@@ -17,3 +18,7 @@
     -   An article discussing the benefits of reading.
 -   A footer with the coder's GitHub link.
 -   Dark/Light theme toggle functionality.
+
+## Live Demo
+
+You can access a live demo of this project here: [Live Demo](https://prismatic-rugelach-b3d377.netlify.app/).
