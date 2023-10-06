@@ -13,6 +13,9 @@ header {
     grid-template-areas: "h1 . button . .";
     text-align: center;
 }
+figure {
+    margin: 0;
+}
 h2,
 footer {
     text-align: center;
@@ -74,8 +77,10 @@ a {
     filter: contrast(65%);
 }
 .grid {
+    margin: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
 }
 .grid img {
     transition: all 300ms ease-in-out;
@@ -105,4 +110,15 @@ a {
 .dark-theme #toggle-theme {
     background-color: antiquewhite;
     color: black;
+}
+@media screen and (max-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    img,
+    .main-image,
+    .last-image {
+        max-width: 100%;
+    }
 }
